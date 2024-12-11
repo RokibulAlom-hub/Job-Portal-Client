@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import navlogo from '../../assets/job-search .png'
+import Logout from '../../GeneralPages/AuthPages/Logout';
 const Navbar = () => {
     const navLinks = <>
         <NavLink to='/'>Home</NavLink>
@@ -46,6 +47,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <Link to='/register' className="btn">Register</Link >
+                    <Logout></Logout>
                 </div>
             </div>
         </div>
