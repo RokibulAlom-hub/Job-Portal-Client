@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
+import { Link, NavLink } from 'react-router-dom';
+import navlogo from '../../assets/job-search .png'
 const Navbar = () => {
     const navLinks = <>
         <NavLink to='/'>Home</NavLink>
@@ -35,7 +35,9 @@ const Navbar = () => {
         
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to="/" className="cursor-pointer">
+                    <img className=' w-[40px] ' src={navlogo}/>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <div className='space-x-3'>
@@ -43,7 +45,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link to='/register' className="btn">Register</Link >
                 </div>
             </div>
         </div>
