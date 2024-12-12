@@ -6,7 +6,7 @@ const Logout = () => {
     const handleLogout = () => {
         logout()
         .then(() => {
-            console.log('successfully log in');
+            console.log('successfully log out');
         })
     }
     return (

@@ -14,8 +14,7 @@ const Authprovider = ({children}) => {
     }
     // log in 
     const signIn = (email,password) => {
-        setLoading(true)
-        return signInWithEmailAndPassword(email,password)
+        return signInWithEmailAndPassword(auth,email,password)
     }
     // onsuthstate change
     useEffect(() => {
@@ -35,7 +34,8 @@ const Authprovider = ({children}) => {
     const allInfo = {
         createUser,
         signIn,
-        logout
+        logout,
+        user
 
     }
     return (

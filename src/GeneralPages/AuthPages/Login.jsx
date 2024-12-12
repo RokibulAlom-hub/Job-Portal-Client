@@ -4,7 +4,7 @@ import Lottie from 'lottie-react';
 import Authcontext from '../../Authcontext/Authcontext';
 const Login = () => {
     const{signIn} = useContext(Authcontext)
-    const handleLogin = () =>{
+    const handleLogin = (e) =>{
         e.preventDefault ();
         const form = new FormData(e.target);
         const email = form.get('email')

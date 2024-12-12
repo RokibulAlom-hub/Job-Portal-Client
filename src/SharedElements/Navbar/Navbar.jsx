@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import navlogo from '../../assets/job-search .png'
 import Logout from '../../GeneralPages/AuthPages/Logout';
+import Authcontext from '../../Authcontext/Authcontext';
 const Navbar = () => {
+    const{user} = useContext(Authcontext)
     const navLinks = <>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/'>Home</NavLink>
@@ -46,8 +48,16 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/register' className="btn">Register</Link >
-                    <Logout></Logout>
+                    {
+                        user ? <div>
+                            <Logout></Logout>
+                             </div>
+                             : <div>
+                                 <Link to='/register' className="btn">Register</Link >
+                                 <Link to='/login' className="btn">Login</Link >
+                             </div>
+
+                    }
                 </div>
             </div>
         </div>
