@@ -60,8 +60,8 @@ const JobDetails = () => {
         <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">HR Email:</span> <a href={`mailto:${job?.hr_email}`} className="text-cyan-500 dark:text-cyan-400 underline">{job?.hr_email}</a></p>
       </div>
       <div>
-        <Link>
-        
+        <Link to={`/jobapply/${id}`}>
+           <button className='btn'>Apply for this Job</button>
         </Link>
       </div>
     </div>
