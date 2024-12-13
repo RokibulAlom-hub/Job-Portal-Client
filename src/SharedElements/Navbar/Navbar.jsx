@@ -7,9 +7,10 @@ const Navbar = () => {
     const{user} = useContext(Authcontext)
     const navLinks = <>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/'>Home</NavLink>
+            {
+                user ?  <NavLink to='/addjobs'>Addjobs</NavLink> : ""
+            }
+        
     </>
     return (
         <div className='mx-auto w-11/12'>

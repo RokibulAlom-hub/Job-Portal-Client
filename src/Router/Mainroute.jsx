@@ -7,6 +7,8 @@ import Login from '../GeneralPages/AuthPages/Login';
 import Jobdetails from '../GeneralPages/DetailsPage/jobdetailspage/Jobdetails';
 import PrivateRoute from './Privateroute/PrivateRoute';
 import Jobapply from '../GeneralPages/DetailsPage/jobdetailspage/Jobapply';
+import Myapply from '../GeneralPages/DetailsPage/MyapplyPage/Myapply';
+import AddJobs from '../GeneralPages/AddJobsPage/AddJobs';
 export const router = createBrowserRouter([
     {
         path:'/',
@@ -32,7 +34,14 @@ export const router = createBrowserRouter([
             {
                path:'/jobapply/:id',
                element:<PrivateRoute><Jobapply></Jobapply></PrivateRoute>,
-              
+            },
+            {
+               path:'/myapply/:email',
+               element:<PrivateRoute><Myapply></Myapply></PrivateRoute>,
+            },
+            {
+               path:'/addjobs',
+               element:<PrivateRoute><AddJobs></AddJobs></PrivateRoute>,
             },
         ]
     }

@@ -1,11 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import userAuth from '../../../CustoomHooks/userAuth';
 
 const Jobapply = () => {
     const { id } = useParams();
     console.log(id);
-    
+    const navigate = useNavigate();
     const{user} = userAuth();
     const handleapply = (e) =>{
         e.preventDefault()
@@ -30,8 +30,8 @@ const Jobapply = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            
             alert('user created ')
+            navigate(`/myapply/${user.email}`)
         }
         )
     }
