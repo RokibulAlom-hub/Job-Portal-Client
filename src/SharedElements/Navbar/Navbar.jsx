@@ -5,13 +5,18 @@ import Logout from '../../GeneralPages/AuthPages/Logout';
 import Authcontext from '../../Authcontext/Authcontext';
 const Navbar = () => {
     const{user} = useContext(Authcontext)
-    const navLinks = <>
+    const navLinks = <div className='flex gap-2'>
+        <div>
         <NavLink to='/'>Home</NavLink>
+        </div>
             {
-                user ?  <NavLink to='/addjobs'>Addjobs</NavLink> : ""
+                user ?  <div className='flex gap-2' >
+                    <NavLink to='/addjobs'>Addjobs</NavLink>
+                    <NavLink to='/Mypostedjobs'>Mypostedjobs</NavLink>
+                </div> : ""
             }
         
-    </>
+    </div>
     return (
         <div className='mx-auto w-11/12'>
             <div className="navbar bg-base-100">
